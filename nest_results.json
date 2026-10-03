@@ -1,0 +1,82 @@
+{
+  "blank": {
+    "frame_edge_mm": 1500.0,
+    "is_concave_at_f0": true,
+    "concave_below_f": 0.393,
+    "long_side_mm": 1500.0,
+    "note": "The frame edge is 1500.0 mm and the standard sheet is 1500 mm wide. The blank cannot be cut from it with any trim allowance unless it is turned, and turning it turns the grain."
+  },
+  "margin_mm": 10.0,
+  "kerf_mm": 3.0,
+  "rotation_note": "180 degrees keeps the grain running the same way on a directional finish. 90 degrees does not.",
+  "runs": [
+    {
+      "label": "free, 26 shapes",
+      "stock": "1500 x 3000",
+      "fits_without_turning": false,
+      "fits_at_all": false,
+      "shapes": 26,
+      "pieces": 352,
+      "metal_m2": 249.4,
+      "bbox_efficiency_min": 0.3474,
+      "bbox_efficiency_max": 0.5691,
+      "pair_efficiency_min": 0.3474,
+      "pair_efficiency_max": 0.5691,
+      "sheets_one_up": -1,
+      "sheets_paired": -1,
+      "waste_one_up_pct": null,
+      "waste_paired_pct": null
+    },
+    {
+      "label": "five families",
+      "stock": "1500 x 3000",
+      "fits_without_turning": false,
+      "fits_at_all": false,
+      "shapes": 5,
+      "pieces": 352,
+      "metal_m2": 266.4,
+      "bbox_efficiency_min": 0.4317,
+      "bbox_efficiency_max": 0.5691,
+      "pair_efficiency_min": 0.4317,
+      "pair_efficiency_max": 0.5691,
+      "sheets_one_up": -1,
+      "sheets_paired": -1,
+      "waste_one_up_pct": null,
+      "waste_paired_pct": null
+    },
+    {
+      "label": "free, 26 shapes",
+      "stock": "2000 x 4000",
+      "fits_without_turning": true,
+      "fits_at_all": true,
+      "shapes": 26,
+      "pieces": 352,
+      "metal_m2": 249.4,
+      "bbox_efficiency_min": 0.3474,
+      "bbox_efficiency_max": 0.5691,
+      "pair_efficiency_min": 0.5592,
+      "pair_efficiency_max": 0.9174,
+      "sheets_one_up": 91,
+      "sheets_paired": 57,
+      "waste_one_up_pct": 65.7,
+      "waste_paired_pct": 45.3
+    },
+    {
+      "label": "five families",
+      "stock": "2000 x 4000",
+      "fits_without_turning": true,
+      "fits_at_all": true,
+      "shapes": 5,
+      "pieces": 352,
+      "metal_m2": 266.4,
+      "bbox_efficiency_min": 0.4317,
+      "bbox_efficiency_max": 0.5691,
+      "pair_efficiency_min": 0.5605,
+      "pair_efficiency_max": 0.889,
+      "sheets_one_up": 89,
+      "sheets_paired": 58,
+      "waste_one_up_pct": 62.6,
+      "waste_paired_pct": 42.6
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "status": "Inputs prepared. Grasshopper setup and analysis pending.",
+  "model": "FV-LB01-west-facing-inputs.3dm",
+  "rhino3dm": "8.17.0",
+  "source": "exports/FV-05-readback.json",
+  "source_sha256": "9f2147fd180e4c2591b4da2ba3207e1c6ada13f09ca180f1e2180c2df25a7361",
+  "units": "metres",
+  "orientation": "west-facing; +Y north; +Z up",
+  "transform": "(x, y, z) -> (y, -x, z)",
+  "context_meshes": 88,
+  "context_triangles": 704,
+  "test_meshes": 88,
+  "test_faces": 3168,
+  "grid_size_m": 0.25,
+  "test_area_m2": 198,
+  "entrance_excluded": true,
+  "location_assumption": {
+    "city": "Istanbul",
+    "latitude": 40.99329222222222,
+    "longitude": 29.064626666666665,
+    "time_zone": 3
+  },
+  "limits": "No site context, thickness or glazing optical properties. No results yet."
+}

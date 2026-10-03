@@ -1,0 +1,16 @@
+{
+  "file": "FV-05-free-radial.ifc",
+  "schema": "IFC4",
+  "ifcopenshell": "0.8.5",
+  "validation_issues": 0,
+  "units": 88,
+  "triangles": 704,
+  "pieces_described": 352,
+  "free_families": 26,
+  "properties_matched_to_csv": 1144,
+  "developed_area_m2": 249.35418072926203,
+  "max_vertex_error_m": 0.0,
+  "geometry_engine_readback": "passed",
+  "scope": "Local IFC validation; external viewer evidence is in FV-05-speckle-review.json.",
+  "limits": "Open midsurfaces; no thickness, bend allowance, fixings, glass or frame. Not fabrication-ready."
+}

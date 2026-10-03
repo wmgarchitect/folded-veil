@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Folded Veil · IFC review</title>
+<style>
+:root{color-scheme:dark;font-family:Segoe UI,Arial,sans-serif;background:#101311;color:#e9eee8}
+*{box-sizing:border-box}body{margin:0}header{padding:26px 34px;border-bottom:1px solid #354039}
+small{color:#a3bdac;letter-spacing:.13em}h1{font-size:30px;font-weight:500;margin:8px 0}p{color:#b8c5bb;line-height:1.6;margin:8px 0}
+main{display:grid;grid-template-columns:minmax(0,1fr) 340px;min-height:70vh}.scene{padding:26px}aside{padding:26px;border-left:1px solid #354039;background:#181e1a}
+button,select,a.download{background:#26372c;color:#e9eee8;border:1px solid #648570;padding:9px 13px;border-radius:5px;cursor:pointer;font:inherit;text-decoration:none}
+button[aria-pressed=true]{background:#c8e5ae;color:#152110}button:focus-visible,select:focus-visible{outline:3px solid #ddbb68}
+.toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}svg{width:100%;height:auto;max-height:65vh;display:block;margin-top:18px}
+svg g{cursor:pointer}svg polygon{stroke:#17291e;stroke-width:.016;stroke-linejoin:round}svg g.selected polygon{stroke:#ffe191;stroke-width:.04;fill:#d3af66!important}
+table{width:100%;border-collapse:collapse;font-size:13px}td{padding:9px 0;border-bottom:1px solid #354039}td:last-child{text-align:right;font-family:Consolas,monospace;color:#dfd2a4}
+.badge{color:#c8e5ae;font-size:13px}.id{font-size:25px;margin:22px 0 6px}#guid{font:11px Consolas,monospace;overflow-wrap:anywhere;color:#a3bdac}
+footer{border-top:1px solid #354039;padding:18px 34px;font-size:13px;color:#a3bdac}.note{font-size:12px;margin-top:20px}.metrics{display:flex;gap:28px;flex-wrap:wrap;margin-top:18px}.metric b{font-size:22px;color:#dbeacd}.metric span{display:block;font-size:12px;color:#a3bdac}
+@media(max-width:900px){main{grid-template-columns:1fr}aside{border-left:0;border-top:1px solid #354039}header,.scene,aside{padding:20px}}
+</style>
+<header><small>ARCHICODER / FOLDED VEIL / SESSION 05A</small><h1>The geometry and its fabrication data.</h1>
+<p>Local IFC readback · Free radial gradient · Select a unit to inspect its properties.</p>
+<div class="metrics"><div class="metric"><b>88</b><span>units</span></div><div class="metric"><b>704</b><span>triangles</span></div><div class="metric"><b>26</b><span>free families</span></div><div class="metric"><b id="area"></b><span>m² developed metal</span></div></div></header>
+<main><section class="scene"><div class="toolbar"><button id="front" aria-pressed="true">Elevation</button><button id="oblique" aria-pressed="false">Oblique</button><a class="download" href="FV-05-free-radial.ifc" download>Download IFC4</a></div>
+<svg id="model" viewBox="-1 -13.5 21 15" role="img" aria-label="Folded veil facade. Use the unit dropdown to select a panel with the keyboard."></svg>
+<p class="note">6 × 3 m entrance opening. Geometry is read from the exported IFC with IfcOpenShell; this page is a generated inspection snapshot, not a general IFC viewer.</p></section>
+<aside><label for="units">Inspect unit</label> <select id="units" aria-label="Select unit"></select><div class="id" id="unit-id"></div><div id="guid"></div><p class="badge">IFC4 / IfcPlate / ARC_Fabrication</p><table><tbody id="properties"></tbody></table>
+<p class="note">The proposed five-family label does not change this geometry. Blank dimensions and area describe one of four sheet pieces per unit.</p></aside></main>
+<footer><span id="checks"></span><br>Open surfaces; sheet thickness, bend allowance, fixings, glazing and frame are not modelled. <a href="https://app.speckle.systems/projects/0f83cf24a9/models/5a3b3c7dd5" style="color:#c8e5ae">Open the published Speckle model</a> · Viewer spot check completed 1 October 2026.</footer>
+<script>
+const records=__RECORDS__, report=__REPORT__;
+let selected='FV-001', oblique=false;
+const model=document.getElementById('model'), units=document.getElementById('units');
+const fields=[['family_free','Free family',''],['family_five','Proposed five-family group',''],['depth_mm','Depth',' mm'],['aperture_r_mm','Aperture half-diagonal',' mm'],['bend_deg','Internal bend angle','°'],['pieces','Sheet pieces',''],['blank_w_mm','Blank width',' mm'],['blank_h_mm','Blank height',' mm'],['blank_area_m2','Blank area / piece',' m²'],['f','Field value',''],['bay_col','Unit column (zero-based)',''],['row','Unit row (zero-based)','']];
+for(const r of records){const option=document.createElement('option');option.value=r.id;option.textContent=r.id;units.appendChild(option)}
+function select(id){selected=id;units.value=id;const r=records.find(x=>x.id===id);document.getElementById('unit-id').textContent=id;document.getElementById('guid').textContent=r.guid;document.getElementById('properties').innerHTML='';for(const [key,label,suffix] of fields){const tr=document.createElement('tr');for(const value of [label,r.properties[key]+suffix]){const td=document.createElement('td');td.textContent=value;tr.appendChild(td)}document.getElementById('properties').appendChild(tr)}for(const g of model.querySelectorAll('g'))g.classList.toggle('selected',g.dataset.id===id)}
+function draw(){model.replaceChildren();for(const r of records){const g=document.createElementNS('http://www.w3.org/2000/svg','g');g.dataset.id=r.id;const title=document.createElementNS(g.namespaceURI,'title');title.textContent=r.id+' · '+r.properties.depth_mm+' mm';g.appendChild(title);for(let i=0;i<r.faces.length;i++){const face=r.faces[i], poly=document.createElementNS(g.namespaceURI,'polygon');poly.setAttribute('points',face.map(j=>{const [x,y,z]=r.vertices[j];return `${x-(oblique?y*.85:0)},${-z+(oblique?y*.4:0)}`}).join(' '));poly.setAttribute('fill',`hsl(136 18% ${35+(i%4)*6+r.properties.f*14}%)`);g.appendChild(poly)}g.addEventListener('click',()=>select(r.id));model.appendChild(g)}select(selected)}
+units.addEventListener('change',()=>select(units.value));
+for(const [id,value] of [['front',false],['oblique',true]])document.getElementById(id).addEventListener('click',()=>{oblique=value;document.getElementById('front').setAttribute('aria-pressed',String(!value));document.getElementById('oblique').setAttribute('aria-pressed',String(value));draw()});
+document.getElementById('area').textContent=report.developed_area_m2.toFixed(2);
+document.getElementById('checks').textContent=`${report.validation_issues} IFC validation issues · ${report.properties_matched_to_csv.toLocaleString()} CSV values matched · Maximum vertex difference: ${report.max_vertex_error_m} m`;
+draw();
+</script>
+</html>

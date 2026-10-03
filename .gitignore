@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.DS_Store
+.deps/
+.venv/
+*.3dmbak
+*.rhl
+exports/sun-hours/*-faces.json
+exports/sun-hours/LB01-0621-per-unit.json

@@ -1,0 +1,26 @@
+{
+  "model": "rhino/FV-folded-veil-reference.3dm",
+  "source": "exports/FV-05-readback.json",
+  "source_sha256": "9f2147fd180e4c2591b4da2ba3207e1c6ada13f09ca180f1e2180c2df25a7361",
+  "units": "metres",
+  "axes": "+X along facade, -Y outward, +Z up",
+  "layers": [
+    "01_Veil_FreeRadial",
+    "02_Glass",
+    "03_Unit_Frames",
+    "04_Entrance",
+    "05_Slab_Edges_Indicative",
+    "06_Labels"
+  ],
+  "veil_meshes": 88,
+  "veil_triangles": 704,
+  "glass_panels": 88,
+  "max_vertex_deviation_m": 9.102429920915256e-07,
+  "veil_area_m2_mesh": 249.35,
+  "veil_area_m2_schedule": 249.35,
+  "depth_mm_min_max": [
+    120.0,
+    900.0
+  ],
+  "limits": "Open midsurfaces. No metal thickness, bend allowances, joints, glazing build-up or supports. Slab edges are indicative only."
+}

@@ -1,0 +1,13 @@
+{
+  "date": "03-21",
+  "timestep": 4,
+  "offset_m": 0.01,
+  "sun_vectors": 49,
+  "faces": 3168,
+  "a_mean_h": 6.25,
+  "a_min_h": 6.25,
+  "a_max_h": 6.25,
+  "b_mean_h": 1.0215435606060606,
+  "b_min_h": 0.0,
+  "b_max_h": 5.75
+}

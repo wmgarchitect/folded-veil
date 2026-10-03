@@ -1,0 +1,923 @@
+{
+  "model_limits": [
+    "ASHRAE clear sky, twelve design days, hourly, month-length weighted. Not TMY.",
+    "One rectangular neighbour, flat topped, 12 x 29 m in plan and 21 m tall, 15 m west of the glass. A stand-in for a street, not a surveyed site.",
+    "Irradiation is on the glass plane. The veil's own self-shading is not in this number."
+  ],
+  "solar": {
+    "bare_min": 1163.3,
+    "bare_max": 1163.3,
+    "bare_spread_pct": 0.0,
+    "bare_distinct_values": 1,
+    "site_min": 538.0,
+    "site_max": 958.2,
+    "site_spread_pct": 43.85,
+    "site_distinct_values": 74,
+    "units_shaded": 88
+  },
+  "fields": [
+    {
+      "name": "vertical, 1D",
+      "families": 8,
+      "depth_min_mm": 120.0,
+      "depth_max_mm": 900.0,
+      "spread_mm": 780.0,
+      "metal_m2": 263.4
+    },
+    {
+      "name": "solar, bare elevation",
+      "families": 1,
+      "depth_min_mm": 120.0,
+      "depth_max_mm": 120.0,
+      "spread_mm": 0.0,
+      "metal_m2": 140.1
+    },
+    {
+      "name": "solar, one neighbour",
+      "families": 78,
+      "depth_min_mm": 120.0,
+      "depth_max_mm": 900.0,
+      "spread_mm": 780.0,
+      "metal_m2": 246.8
+    },
+    {
+      "name": "radial from the entrance",
+      "families": 26,
+      "depth_min_mm": 120.0,
+      "depth_max_mm": 900.0,
+      "spread_mm": 780.0,
+      "metal_m2": 249.4
+    }
+  ],
+  "rationalisation": [
+    {
+      "name": "vertical, 1D",
+      "k": 5,
+      "families_free": 8,
+      "families_after": 5,
+      "levels_mm": [
+        120.0,
+        342.9,
+        565.7,
+        788.6,
+        900.0
+      ],
+      "rms_deviation_mm": 67.2,
+      "max_deviation_mm": 111.4,
+      "units_changed": 32,
+      "extra_metal_m2": 11.5,
+      "extra_metal_pct": 4.4
+    },
+    {
+      "name": "solar, one neighbour",
+      "k": 5,
+      "families_free": 78,
+      "families_after": 5,
+      "levels_mm": [
+        255.9,
+        419.4,
+        537.1,
+        725.9,
+        900.0
+      ],
+      "rms_deviation_mm": 79.1,
+      "max_deviation_mm": 168.1,
+      "units_changed": 82,
+      "extra_metal_m2": 17.7,
+      "extra_metal_pct": 7.2
+    },
+    {
+      "name": "radial from the entrance",
+      "k": 5,
+      "families_free": 26,
+      "families_after": 5,
+      "levels_mm": [
+        265.4,
+        484.1,
+        596.2,
+        738.8,
+        900.0
+      ],
+      "rms_deviation_mm": 78.5,
+      "max_deviation_mm": 161.7,
+      "units_changed": 68,
+      "extra_metal_m2": 17.0,
+      "extra_metal_pct": 6.8
+    }
+  ],
+  "k_curve": [
+    {
+      "k": 1,
+      "families_after": 1,
+      "rms_deviation_mm": 459.7,
+      "extra_metal_pct": 44.5
+    },
+    {
+      "k": 2,
+      "families_after": 2,
+      "rms_deviation_mm": 219.8,
+      "extra_metal_pct": 20.5
+    },
+    {
+      "k": 3,
+      "families_after": 3,
+      "rms_deviation_mm": 146.5,
+      "extra_metal_pct": 13.6
+    },
+    {
+      "k": 4,
+      "families_after": 4,
+      "rms_deviation_mm": 104.5,
+      "extra_metal_pct": 9.3
+    },
+    {
+      "k": 5,
+      "families_after": 5,
+      "rms_deviation_mm": 78.5,
+      "extra_metal_pct": 6.8
+    },
+    {
+      "k": 6,
+      "families_after": 6,
+      "rms_deviation_mm": 59.8,
+      "extra_metal_pct": 5.0
+    },
+    {
+      "k": 7,
+      "families_after": 7,
+      "rms_deviation_mm": 48.7,
+      "extra_metal_pct": 3.9
+    },
+    {
+      "k": 8,
+      "families_after": 8,
+      "rms_deviation_mm": 40.4,
+      "extra_metal_pct": 3.1
+    },
+    {
+      "k": 9,
+      "families_after": 9,
+      "rms_deviation_mm": 35.7,
+      "extra_metal_pct": 2.5
+    },
+    {
+      "k": 10,
+      "families_after": 10,
+      "rms_deviation_mm": 27.5,
+      "extra_metal_pct": 2.1
+    },
+    {
+      "k": 11,
+      "families_after": 11,
+      "rms_deviation_mm": 24.9,
+      "extra_metal_pct": 1.8
+    },
+    {
+      "k": 12,
+      "families_after": 12,
+      "rms_deviation_mm": 22.7,
+      "extra_metal_pct": 1.6
+    }
+  ],
+  "uniform_vs_partition": {
+    "uniform": {
+      "name": "uniform fifths, the paper's own",
+      "families_after": 5,
+      "levels_mm": [
+        120.0,
+        315.0,
+        510.0,
+        705.0,
+        900.0
+      ],
+      "rms_deviation_mm": 114.1,
+      "max_deviation_mm": 190.9,
+      "extra_metal_pct": 11.0
+    },
+    "partition": {
+      "name": "radial from the entrance",
+      "k": 5,
+      "families_free": 26,
+      "families_after": 5,
+      "levels_mm": [
+        265.4,
+        484.1,
+        596.2,
+        738.8,
+        900.0
+      ],
+      "rms_deviation_mm": 78.5,
+      "max_deviation_mm": 161.7,
+      "units_changed": 68,
+      "extra_metal_m2": 17.0,
+      "extra_metal_pct": 6.8
+    }
+  },
+  "chosen_field": "radial from the entrance",
+  "per_unit": [
+    {
+      "col": 0,
+      "row": 0,
+      "vertical": 0.0,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 591.7,
+      "radial": 0.4404
+    },
+    {
+      "col": 1,
+      "row": 0,
+      "vertical": 0.0,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 578.0,
+      "radial": 0.293
+    },
+    {
+      "col": 2,
+      "row": 0,
+      "vertical": 0.0,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 564.4,
+      "radial": 0.1461
+    },
+    {
+      "col": 3,
+      "row": 0,
+      "vertical": 0.0,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 538.0,
+      "radial": 0.0
+    },
+    {
+      "col": 8,
+      "row": 0,
+      "vertical": 0.0,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 694.1,
+      "radial": 0.0
+    },
+    {
+      "col": 9,
+      "row": 0,
+      "vertical": 0.0,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 715.5,
+      "radial": 0.1461
+    },
+    {
+      "col": 10,
+      "row": 0,
+      "vertical": 0.0,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 774.8,
+      "radial": 0.293
+    },
+    {
+      "col": 11,
+      "row": 0,
+      "vertical": 0.0,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 792.6,
+      "radial": 0.4404
+    },
+    {
+      "col": 0,
+      "row": 1,
+      "vertical": 0.1429,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 606.6,
+      "radial": 0.4668
+    },
+    {
+      "col": 1,
+      "row": 1,
+      "vertical": 0.1429,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 592.9,
+      "radial": 0.325
+    },
+    {
+      "col": 2,
+      "row": 1,
+      "vertical": 0.1429,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 579.4,
+      "radial": 0.1864
+    },
+    {
+      "col": 3,
+      "row": 1,
+      "vertical": 0.1429,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 552.9,
+      "radial": 0.0542
+    },
+    {
+      "col": 8,
+      "row": 1,
+      "vertical": 0.1429,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 720.6,
+      "radial": 0.0542
+    },
+    {
+      "col": 9,
+      "row": 1,
+      "vertical": 0.1429,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 742.0,
+      "radial": 0.1864
+    },
+    {
+      "col": 10,
+      "row": 1,
+      "vertical": 0.1429,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 819.1,
+      "radial": 0.325
+    },
+    {
+      "col": 11,
+      "row": 1,
+      "vertical": 0.1429,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 819.1,
+      "radial": 0.4668
+    },
+    {
+      "col": 0,
+      "row": 2,
+      "vertical": 0.2857,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 622.2,
+      "radial": 0.5173
+    },
+    {
+      "col": 1,
+      "row": 2,
+      "vertical": 0.2857,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 608.6,
+      "radial": 0.3849
+    },
+    {
+      "col": 2,
+      "row": 2,
+      "vertical": 0.2857,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 595.0,
+      "radial": 0.2595
+    },
+    {
+      "col": 3,
+      "row": 2,
+      "vertical": 0.2857,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 568.6,
+      "radial": 0.1461
+    },
+    {
+      "col": 4,
+      "row": 2,
+      "vertical": 0.2857,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 585.9,
+      "radial": 0.0542
+    },
+    {
+      "col": 5,
+      "row": 2,
+      "vertical": 0.2857,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 594.9,
+      "radial": 0.0
+    },
+    {
+      "col": 6,
+      "row": 2,
+      "vertical": 0.2857,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 647.9,
+      "radial": 0.0
+    },
+    {
+      "col": 7,
+      "row": 2,
+      "vertical": 0.2857,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 696.9,
+      "radial": 0.0542
+    },
+    {
+      "col": 8,
+      "row": 2,
+      "vertical": 0.2857,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 736.2,
+      "radial": 0.1461
+    },
+    {
+      "col": 9,
+      "row": 2,
+      "vertical": 0.2857,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 757.6,
+      "radial": 0.2595
+    },
+    {
+      "col": 10,
+      "row": 2,
+      "vertical": 0.2857,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 834.8,
+      "radial": 0.3849
+    },
+    {
+      "col": 11,
+      "row": 2,
+      "vertical": 0.2857,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 834.8,
+      "radial": 0.5173
+    },
+    {
+      "col": 0,
+      "row": 3,
+      "vertical": 0.4286,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 638.5,
+      "radial": 0.588
+    },
+    {
+      "col": 1,
+      "row": 3,
+      "vertical": 0.4286,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 624.8,
+      "radial": 0.4668
+    },
+    {
+      "col": 2,
+      "row": 3,
+      "vertical": 0.4286,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 611.2,
+      "radial": 0.3555
+    },
+    {
+      "col": 3,
+      "row": 3,
+      "vertical": 0.4286,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 584.8,
+      "radial": 0.2595
+    },
+    {
+      "col": 4,
+      "row": 3,
+      "vertical": 0.4286,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 602.1,
+      "radial": 0.1864
+    },
+    {
+      "col": 5,
+      "row": 3,
+      "vertical": 0.4286,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 611.1,
+      "radial": 0.1461
+    },
+    {
+      "col": 6,
+      "row": 3,
+      "vertical": 0.4286,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 664.1,
+      "radial": 0.1461
+    },
+    {
+      "col": 7,
+      "row": 3,
+      "vertical": 0.4286,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 713.1,
+      "radial": 0.1864
+    },
+    {
+      "col": 8,
+      "row": 3,
+      "vertical": 0.4286,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 752.4,
+      "radial": 0.2595
+    },
+    {
+      "col": 9,
+      "row": 3,
+      "vertical": 0.4286,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 773.8,
+      "radial": 0.3555
+    },
+    {
+      "col": 10,
+      "row": 3,
+      "vertical": 0.4286,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 851.0,
+      "radial": 0.4668
+    },
+    {
+      "col": 11,
+      "row": 3,
+      "vertical": 0.4286,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 851.0,
+      "radial": 0.588
+    },
+    {
+      "col": 0,
+      "row": 4,
+      "vertical": 0.5714,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 673.7,
+      "radial": 0.675
+    },
+    {
+      "col": 1,
+      "row": 4,
+      "vertical": 0.5714,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 660.0,
+      "radial": 0.565
+    },
+    {
+      "col": 2,
+      "row": 4,
+      "vertical": 0.5714,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 646.4,
+      "radial": 0.4668
+    },
+    {
+      "col": 3,
+      "row": 4,
+      "vertical": 0.5714,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 620.0,
+      "radial": 0.3849
+    },
+    {
+      "col": 4,
+      "row": 4,
+      "vertical": 0.5714,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 637.3,
+      "radial": 0.325
+    },
+    {
+      "col": 5,
+      "row": 4,
+      "vertical": 0.5714,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 646.4,
+      "radial": 0.293
+    },
+    {
+      "col": 6,
+      "row": 4,
+      "vertical": 0.5714,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 699.3,
+      "radial": 0.293
+    },
+    {
+      "col": 7,
+      "row": 4,
+      "vertical": 0.5714,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 748.3,
+      "radial": 0.325
+    },
+    {
+      "col": 8,
+      "row": 4,
+      "vertical": 0.5714,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 787.7,
+      "radial": 0.3849
+    },
+    {
+      "col": 9,
+      "row": 4,
+      "vertical": 0.5714,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 791.7,
+      "radial": 0.4668
+    },
+    {
+      "col": 10,
+      "row": 4,
+      "vertical": 0.5714,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 861.0,
+      "radial": 0.565
+    },
+    {
+      "col": 11,
+      "row": 4,
+      "vertical": 0.5714,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 861.0,
+      "radial": 0.675
+    },
+    {
+      "col": 0,
+      "row": 5,
+      "vertical": 0.7143,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 708.5,
+      "radial": 0.7745
+    },
+    {
+      "col": 1,
+      "row": 5,
+      "vertical": 0.7143,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 694.8,
+      "radial": 0.675
+    },
+    {
+      "col": 2,
+      "row": 5,
+      "vertical": 0.7143,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 694.8,
+      "radial": 0.588
+    },
+    {
+      "col": 3,
+      "row": 5,
+      "vertical": 0.7143,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 668.4,
+      "radial": 0.5173
+    },
+    {
+      "col": 4,
+      "row": 5,
+      "vertical": 0.7143,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 685.7,
+      "radial": 0.4668
+    },
+    {
+      "col": 5,
+      "row": 5,
+      "vertical": 0.7143,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 694.8,
+      "radial": 0.4404
+    },
+    {
+      "col": 6,
+      "row": 5,
+      "vertical": 0.7143,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 747.7,
+      "radial": 0.4404
+    },
+    {
+      "col": 7,
+      "row": 5,
+      "vertical": 0.7143,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 796.8,
+      "radial": 0.4668
+    },
+    {
+      "col": 8,
+      "row": 5,
+      "vertical": 0.7143,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 836.1,
+      "radial": 0.5173
+    },
+    {
+      "col": 9,
+      "row": 5,
+      "vertical": 0.7143,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 840.1,
+      "radial": 0.588
+    },
+    {
+      "col": 10,
+      "row": 5,
+      "vertical": 0.7143,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 890.5,
+      "radial": 0.675
+    },
+    {
+      "col": 11,
+      "row": 5,
+      "vertical": 0.7143,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 890.5,
+      "radial": 0.7745
+    },
+    {
+      "col": 0,
+      "row": 6,
+      "vertical": 0.8571,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 746.5,
+      "radial": 0.8836
+    },
+    {
+      "col": 1,
+      "row": 6,
+      "vertical": 0.8571,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 732.8,
+      "radial": 0.7934
+    },
+    {
+      "col": 2,
+      "row": 6,
+      "vertical": 0.8571,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 732.8,
+      "radial": 0.7159
+    },
+    {
+      "col": 3,
+      "row": 6,
+      "vertical": 0.8571,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 706.4,
+      "radial": 0.6539
+    },
+    {
+      "col": 4,
+      "row": 6,
+      "vertical": 0.8571,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 723.7,
+      "radial": 0.6105
+    },
+    {
+      "col": 5,
+      "row": 6,
+      "vertical": 0.8571,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 732.8,
+      "radial": 0.588
+    },
+    {
+      "col": 6,
+      "row": 6,
+      "vertical": 0.8571,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 785.7,
+      "radial": 0.588
+    },
+    {
+      "col": 7,
+      "row": 6,
+      "vertical": 0.8571,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 834.8,
+      "radial": 0.6105
+    },
+    {
+      "col": 8,
+      "row": 6,
+      "vertical": 0.8571,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 874.1,
+      "radial": 0.6539
+    },
+    {
+      "col": 9,
+      "row": 6,
+      "vertical": 0.8571,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 878.1,
+      "radial": 0.7159
+    },
+    {
+      "col": 10,
+      "row": 6,
+      "vertical": 0.8571,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 928.5,
+      "radial": 0.7934
+    },
+    {
+      "col": 11,
+      "row": 6,
+      "vertical": 0.8571,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 928.5,
+      "radial": 0.8836
+    },
+    {
+      "col": 0,
+      "row": 7,
+      "vertical": 1.0,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 762.7,
+      "radial": 1.0
+    },
+    {
+      "col": 1,
+      "row": 7,
+      "vertical": 1.0,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 749.0,
+      "radial": 0.9179
+    },
+    {
+      "col": 2,
+      "row": 7,
+      "vertical": 1.0,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 749.0,
+      "radial": 0.8483
+    },
+    {
+      "col": 3,
+      "row": 7,
+      "vertical": 1.0,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 736.1,
+      "radial": 0.7934
+    },
+    {
+      "col": 4,
+      "row": 7,
+      "vertical": 1.0,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 753.3,
+      "radial": 0.7553
+    },
+    {
+      "col": 5,
+      "row": 7,
+      "vertical": 1.0,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 762.4,
+      "radial": 0.7358
+    },
+    {
+      "col": 6,
+      "row": 7,
+      "vertical": 1.0,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 815.4,
+      "radial": 0.7358
+    },
+    {
+      "col": 7,
+      "row": 7,
+      "vertical": 1.0,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 864.4,
+      "radial": 0.7553
+    },
+    {
+      "col": 8,
+      "row": 7,
+      "vertical": 1.0,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 903.7,
+      "radial": 0.7934
+    },
+    {
+      "col": 9,
+      "row": 7,
+      "vertical": 1.0,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 907.8,
+      "radial": 0.8483
+    },
+    {
+      "col": 10,
+      "row": 7,
+      "vertical": 1.0,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 958.2,
+      "radial": 0.9179
+    },
+    {
+      "col": 11,
+      "row": 7,
+      "vertical": 1.0,
+      "solar_bare_kwh": 1163.3,
+      "solar_site_kwh": 958.2,
+      "radial": 1.0
+    }
+  ]
+}

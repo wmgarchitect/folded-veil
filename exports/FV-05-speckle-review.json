@@ -1,0 +1,29 @@
+{
+  "review_date": "2026-10-01",
+  "workspace": "Archicoder",
+  "project_name": "Folded Veil",
+  "project_id": "0f83cf24a9",
+  "model_id": "5a3b3c7dd5",
+  "version_id": "7e698df178",
+  "model_url": "https://app.speckle.systems/projects/0f83cf24a9/models/5a3b3c7dd5",
+  "access": "Public: anyone with the link can view; confirmed in project settings",
+  "upload_status": "Complete; ingestion complete",
+  "source_file": "FV-05-free-radial.ifc",
+  "source_sha256": "01df9645ee529fdc7090271182efcc939b83a3df2840eba06b957dcb33055832",
+  "source_app": "IFC",
+  "importer_label": "IFC 0.1.0",
+  "viewer_elements": 94,
+  "plate_counts_by_storey": {"Level 0":16,"Level 1":24,"Level 2":24,"Level 3":24},
+  "non_plate_elements": {"IfcSite":1,"IfcBuilding":1,"IfcBuildingStorey":4},
+  "visual_geometry_check": "Facade visible in front view; entrance aperture remains open; individual units selectable.",
+  "geometry_units_displayed": "m",
+  "property_sets_visible": {"ARC_Fabrication":13,"ARC_Design":10},
+  "sampled_units": [
+    {"unit":"FV-004","depth_mm":120,"aperture_r_mm":652.5,"bend_deg":136.56,"blank_w_mm":1500,"blank_h_mm":763.7,"blank_area_m2":0.3979,"pieces":4,"family_free":"T01","family_five":"F1","guid":"0uVzBfzUDKVevP9rVyY0wV"},
+    {"unit":"FV-088","depth_mm":900,"aperture_r_mm":315,"bend_deg":139.68,"blank_w_mm":1500,"blank_h_mm":1199.2,"blank_area_m2":1.0236,"pieces":4,"family_free":"T30","family_five":"F5","guid":"0IxcIRcmDISgrmAy$D3q6F"}
+  ],
+  "verification_limits": "Speckle UI spot check, not an automated comparison of all imported values or vertices. Explicit IFC property-unit objects were not verified in Speckle; original field suffixes and numeric values survived. Public setting confirmed in authenticated UI, anonymous access not independently tested.",
+  "evidence": ["../media/FV-05-speckle-overview.jpg","../media/FV-05-speckle-FV004.jpg","../media/FV-05-speckle-FV088.jpg","../media/FV-05-speckle-public.jpg"],
+  "session_05_core_deliverables": "complete",
+  "posting_video": "40-second project story prepared 2026-10-01 with six seconds of actual viewer capture and a labelled static property excerpt; not published"
+}
